@@ -32,6 +32,44 @@
                 </header>
         </div>
         <hr>
+        <div class="container">
+            <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                <div class="btn-group" role="group">
+                <a href="index.jsp">
+                    <button type="button" class="btn btn-default">
+                    <span style="padding-left: 10px; float: left" class="glyphicon glyphicon-home" aria-hidden="true"></span>Home
+                </button>
+                    </a>
+                </div>
+                <div class="btn-group" role="group">
+                    <a href="adiciona-fichapolicial.jsp">
+                    <button type="button" class="btn btn-default">
+                <span style="padding-left: 10px; float: left" class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span>Insere
+                </button></a>
+                </div>
+                <div class="btn-group" role="group">
+                    <a href="altera-fichapolicial.jsp">
+                    <button type="button" class="btn btn-default">
+                <span style="padding-left: 10px; float: left" class="glyphicon glyphicon-transfer" aria-hidden="true"></span>Altera
+                </button></a>
+                </div>
+                <div class="btn-group" role="group">
+                    <a href="lista-fichapolicial.jsp">
+                    <button type="button" class="btn btn-default">
+                        <span style="padding-left: 10px; float: left" class="glyphicon glyphicon-list" aria-hidden="true"></span>Fichas
+                </button>
+                    </a>
+                </div>
+                <div class="btn-group" role="group">
+                    <a href="foragidos-fichapolicial.jsp">
+                    <button type="button" class="btn btn-default">
+                <span style="padding-left: 10px; float: left" class="glyphicon glyphicon-search" aria-hidden="true"></span>Procurados
+                    </button>
+                        </a>
+                </div>
+            </div>
+        </div>
+        <hr>
         <div class="panel panel-default">
         <div class="panel-heading"><h1>Fichas</h1></div>
         <div class="panel-body"><p>Tabela contendo os arquivos polícias, toda
