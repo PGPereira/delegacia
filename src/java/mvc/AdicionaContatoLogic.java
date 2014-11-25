@@ -41,6 +41,6 @@ public class AdicionaContatoLogic implements Logica {
         System.out.println("Adicionando contatum... ");
         
         //volta pa home
-        return "index.jsp";
+        return "adiciona-fichapolicial.jsp";
     }
 }
