@@ -19,6 +19,11 @@
         <script src="Bootstrap/js/bootstrap.min.js"></script>
     </head>
     <body >
+        <div class="jumbotron">
+            <h1>
+                Listagem de Foragidos da Polícia
+            </h1>
+        </div>
         <div class="container">
             <div class="btn-group btn-group-justified" role="group" aria-label="...">
                 <div class="btn-group" role="group">
@@ -56,19 +61,20 @@
                 </div>
             </div>
         </div>
+        <hr>
         <div class="panel panel-default">
             <div class="panel-heading"><h1>Procurados pela polícia</h1></div>
             <div class="panel-body">
-                <p>Tabela contendo os arquivos polícias, toda
-                    informação contida nele é de autoria da Polícia Federal Brasileira,
-                    qualquer cópia indevida é crime federal passível de punições severas.
+                <p>
+                    Essa tabela contém arquivos da Loucademia de Polícia 
+                    e servem apenas para consulta.
                 </p>
                 <p>
-                    Os indivíduos apresentados nesta lista são de alta periculosidade, caso
-                    reconheça não se aproxime e ligue 190 imediatamente.
+                    Os meliantesaqui  apresentados são de alta periculosidade, caso
+                    reconheça-os não se aproxime e ligue 190 imediatamente.
                 </p>
             </div>
-            <table class="table">
+            <table class="table table-responsive">
                 <tr>
                     <th>
                         ID

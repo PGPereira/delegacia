@@ -19,6 +19,11 @@
         <script src="Bootstrap/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <div class="jumbotron">
+            <h1>
+                Remoção de Fichas
+            </h1>
+        </div>
         <div class="container">
             <div class="btn-group btn-group-justified" role="group" aria-label="...">
                 <div class="btn-group" role="group">
@@ -58,10 +63,13 @@
         </div>
         <div class="panel panel-default">
             <div class="panel-heading"><h1>Fichas</h1></div>
-            <div class="panel-body"><p>Tabela contendo os arquivos polícias, toda
-                    informação contida nele é de autoria da Polícia Federal Brasileira,
-                    qualquer cópia indevida é crime federal passível de punições severas.</p></div>
-            <table class="table">
+            <div class="panel-body">
+                <p>
+                    Essa tabela contém arquivos da Loucademia de Polícia 
+                    e servem apenas para consulta.
+                </p>
+            </div>
+            <table class="table table-responsive">
                 <tr>
                     <th>
                         ID
@@ -131,21 +139,18 @@
                         <img src="<%= prisioneiros.getImagem()%>" alt="meliantz" height="50" width="50">
                     </td>
                 </tr>
-                <% } %>
+                <% }%>
             </table>
         </div>
+        <hr>
         <div class="container">
-            <h1>
-                Remove Ficha
-            </h1>
             <form action="mvc">
-                <div class="col-md-2"></div>
-                <div class="col-md-10">
-                    <input type="text" style="display: none;" value="LogicaRemovePrisioneiro" name="logica" />
-                    <h4>ID:</h4>
-                    <input type="text" class="form-control" name="id"/>
-                </div>
-                <button type="submit">Remove</button> 
+                <input type="text" style="display: none;" value="LogicaRemovePrisioneiro" name="logica" />
+                <h4>ID:</h4>
+                <input type="text" class="form-control" name="id"/>
+                <button type="submit">
+                    Remove
+                </button> 
             </form>
         </div>
     </body>

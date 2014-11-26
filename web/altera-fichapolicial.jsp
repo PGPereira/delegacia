@@ -16,7 +16,12 @@
         <script src="Bootstrap/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">
+                Alteração de Fichas
+            </h1>
+        </div>
+        <div class="container" >
             <div class="btn-group btn-group-justified" role="group" aria-label="...">
                 <div class="btn-group" role="group">
                     <a href="index.jsp">
@@ -52,27 +57,20 @@
                     </a>
                 </div>
             </div>
-        </div>
-        <hr>
-        <div class="container" >
-            <h1 >
-                Altera Ficha
-            </h1>
-            <form action="mvc">
-                <div class="col-md-2"></div>
-                <div class="col-md-10">
-                    <input type="text" style="display: none;" value="LogicaAlteraContato" name="logica" />
-                    <h4>ID:</h4> <input type="text" class="form-control" name="id"/>
-                    <h4>Nome:</h4> <input type="text" class="form-control" name="nome"/>
-                    <h4>CPF:</h4> <input type="text" class="form-control" name="cpf"/>
-                    <h4>Residencia:</h4> <input type="text" class="form-control" name="residencia"/>
-                    <h4>Delito:</h4> <input type="text" class="form-control" name="delito"/>
-                    <h4>Data:</h4> <input type="text" class="form-control" name="data"/>
-                    <h4>Hora:</h4> <input type="text" class="form-control" name="hora"/>
-                    <h4>Local:</h4> <input type="text" class="form-control" name="local"/>
-                    <h4>Estado:</h4> <input type="text" class="form-control" name="estado"/>
-                    <h4>Imagem:</h4> <input type="text" class="form-control" name="imagem"/>
-                </div>
+            <hr>
+            <form action="mvc">                
+                <input type="text" style="display: none;" value="LogicaAlteraContato" name="logica" />
+                <h4>ID:</h4> <input type="text" class="form-control" name="id"/>
+                <h4>Nome:</h4> <input type="text" class="form-control" name="nome"/>
+                <h4>CPF:</h4> <input type="text" class="form-control" name="cpf"/>
+                <h4>Residencia:</h4> <input type="text" class="form-control" name="residencia"/>
+                <h4>Delito:</h4> <input type="text" class="form-control" name="delito"/>
+                <h4>Data:</h4> <input type="text" class="form-control" name="data"/>
+                <h4>Hora:</h4> <input type="text" class="form-control" name="hora"/>
+                <h4>Local:</h4> <input type="text" class="form-control" name="local"/>
+                <h4>Estado:</h4> <input type="text" class="form-control" name="estado"/>
+                <h4>Imagem:</h4> <input type="text" class="form-control" name="imagem"/>
+                <br/>
                 <button type="submit" class="btn btn-default">Altera</button>
             </form>
         </div>
