@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author alunos
  */
 @WebServlet("/mvc")
-public class ControllerServlet extends HttpServlet {
+public class ServletDeControle extends HttpServlet {
 
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String parametro = request.getParameter("logica");

@@ -13,12 +13,12 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author alunos
  */
-public class RemoveContatoLogic implements Logica {
+public class LogicaRemoveContato implements Logica {
     @Override
     public String executa(HttpServletRequest req,HttpServletResponse res)throws Exception {
 
         long id = Long.parseLong(req.getParameter("id"));
-        ContatoDao dao = new ContatoDao();
+        PrisioneiroDAO dao = new PrisioneiroDAO();
         dao.removeContato(id);
         System.out.println("Excluindo contato... ");
         return "remove-fichapolicial.jsp";

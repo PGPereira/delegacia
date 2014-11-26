@@ -11,11 +11,10 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author alunos
  */
-public class AlteraContatoLogic implements Logica {
+public class LogicaAdicionaContato implements Logica {
     @Override
     public String executa(HttpServletRequest request,HttpServletResponse res)throws Exception {
 
-        long id = Long.parseLong(request.getParameter("id"));
         String nome = request.getParameter("nome");
         String cpf = request.getParameter("cpf");
         String residencia = request.getParameter("residencia");
@@ -24,9 +23,10 @@ public class AlteraContatoLogic implements Logica {
         String hora = request.getParameter("hora");
         String local = request.getParameter("local");
         String estado = request.getParameter("estado");
+        String imagem = request.getParameter("imagem");
     
 
-        Contato contato = new Contato();
+        Prisioneiro contato = new Prisioneiro();
         contato.setNome(nome);
         contato.setCpf(cpf);
         contato.setResidencia(residencia);
@@ -35,11 +35,12 @@ public class AlteraContatoLogic implements Logica {
         contato.setHora(hora);
         contato.setLocal(local);
         contato.setEstado(estado);
-        ContatoDao dao = new ContatoDao();
-        dao.altera(id, contato);
+        contato.setImagem(imagem);
+        PrisioneiroDAO dao = new PrisioneiroDAO();
+        dao.adiciona(contato);
         System.out.println("Adicionando contatum... ");
         
         //volta pa home
-        return "index.jsp";
+        return "adiciona-fichapolicial.jsp";
     }
 }

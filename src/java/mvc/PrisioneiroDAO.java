@@ -19,18 +19,18 @@ import java.util.logging.Logger;
  *
  * @author alunos
  */
-public class ContatoDao {
+public class PrisioneiroDAO {
     
     private Connection connection;
-    public ContatoDao(){
+    public PrisioneiroDAO(){
         try {
-            this.connection = new ConnectionFactory().getConnection();
+            this.connection = new FabricaDeConexao().getConnection();
         } catch (SQLException ex) {
-            Logger.getLogger(ContatoDao.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(PrisioneiroDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
-    public void adiciona(Contato contato){
+    public void adiciona(Prisioneiro contato){
         String sql = "insert into fichapolicial"+"(nome,cpf,residencia,delito,data,hora,local,estado,imagem)"+"values(?,?,?,?,?,?,?,?,?)";
         try{
             PreparedStatement stmt = connection.prepareStatement(sql);
@@ -53,7 +53,7 @@ public class ContatoDao {
         }
     }
     
-    public void altera(long ID, Contato contato){
+    public void altera(long ID, Prisioneiro contato){
         String sql = "update fichapolicial set nome=?,cpf=?,residencia=?,delito=?,data=?,hora=?,local=?,estado=?,imagem=? WHERE id=?";
         try{
             PreparedStatement stmt = connection.prepareStatement(sql);
@@ -88,11 +88,11 @@ public class ContatoDao {
     public ArrayList getLista() throws SQLException{
         PreparedStatement stmt = this.connection.prepareStatement("select * from fichapolicial");
         ResultSet rs = stmt.executeQuery();
-        ArrayList <Contato> contatos = new ArrayList <Contato>();
+        ArrayList <Prisioneiro> contatos = new ArrayList <Prisioneiro>();
         
         while(rs.next()) {
-            //criando o objeto Contato
-            Contato contato = new Contato();
+            //criando o objeto Prisioneiro
+            Prisioneiro contato = new Prisioneiro();
             contato.setId(rs.getLong("id"));
             contato.setNome(rs.getString("nome"));
             contato.setCpf(rs.getString("cpf"));
@@ -117,11 +117,11 @@ public class ContatoDao {
     public ArrayList getListaAlfabetica() throws SQLException{
         PreparedStatement stmt = this.connection.prepareStatement("select * from fichapolicial order by nome");
         ResultSet rs = stmt.executeQuery();
-        ArrayList <Contato> contatos = new ArrayList <Contato>();
+        ArrayList <Prisioneiro> contatos = new ArrayList <Prisioneiro>();
         
         while(rs.next()) {
-            //criando o objeto Contato
-            Contato contato = new Contato();
+            //criando o objeto Prisioneiro
+            Prisioneiro contato = new Prisioneiro();
             contato.setId(rs.getLong("id"));
             contato.setNome(rs.getString("nome"));
             contato.setCpf(rs.getString("cpf"));
@@ -146,11 +146,11 @@ public class ContatoDao {
     public ArrayList getListaDelito() throws SQLException{
         PreparedStatement stmt = this.connection.prepareStatement("select * from fichapolicial order by delito, nome");
         ResultSet rs = stmt.executeQuery();
-        ArrayList <Contato> contatos = new ArrayList <Contato>();
+        ArrayList <Prisioneiro> contatos = new ArrayList <Prisioneiro>();
         
         while(rs.next()) {
-            //criando o objeto Contato
-            Contato contato = new Contato();
+            //criando o objeto Prisioneiro
+            Prisioneiro contato = new Prisioneiro();
             contato.setId(rs.getLong("id"));
             contato.setNome(rs.getString("nome"));
             contato.setCpf(rs.getString("cpf"));
@@ -175,11 +175,11 @@ public class ContatoDao {
     public ArrayList getListaForagidos() throws SQLException{
         PreparedStatement stmt = this.connection.prepareStatement("select * from fichapolicial where estado='foragido'");
         ResultSet rs = stmt.executeQuery();
-        ArrayList <Contato> contatos = new ArrayList <Contato>();
+        ArrayList <Prisioneiro> contatos = new ArrayList <Prisioneiro>();
         
         while(rs.next()) {
-            //criando o objeto Contato
-            Contato contato = new Contato();
+            //criando o objeto Prisioneiro
+            Prisioneiro contato = new Prisioneiro();
             contato.setId(rs.getLong("id"));
             contato.setNome(rs.getString("nome"));
             contato.setCpf(rs.getString("cpf"));
@@ -208,8 +208,8 @@ public class ContatoDao {
         ArrayList <Contato> contatos = new ArrayList <Contato>();
         
         while(rs.next()) {
-            //criando o objeto Contato
-            Contato contato = new Contato();
+            //criando o objeto Prisioneiro
+            Prisioneiro contato = new Prisioneiro();
             contato.setId(rs.getLong("id"));
             contato.setNome(rs.getString("nome"));
             contato.setEmail(rs.getString("email"));
@@ -236,8 +236,8 @@ public class ContatoDao {
         ArrayList <Contato> contatos = new ArrayList <Contato>();
         
         while(rs.next()) {
-            //criando o objeto Contato
-            Contato contato = new Contato();
+            //criando o objeto Prisioneiro
+            Prisioneiro contato = new Prisioneiro();
             contato.setId(rs.getLong("id"));
             contato.setNome(rs.getString("nome"));
             contato.setEmail(rs.getString("email"));
@@ -264,8 +264,8 @@ public class ContatoDao {
         ArrayList <Contato> contatos = new ArrayList <Contato>();
         
         while(rs.next()) {
-            //criando o objeto Contato
-            Contato contato = new Contato();
+            //criando o objeto Prisioneiro
+            Prisioneiro contato = new Prisioneiro();
             contato.setId(rs.getLong("id"));
             contato.setNome(rs.getString("nome"));
             contato.setEmail(rs.getString("email"));
@@ -291,7 +291,7 @@ public class ContatoDao {
         ArrayList <Trabalho> listaTrabalhos = new ArrayList <>();
         
         while(rs.next()) {
-            //criando o objeto Contato
+            //criando o objeto Prisioneiro
             Trabalho trabalho = new Trabalho();
             trabalho.setNome(rs.getString("nome"));
             trabalho.setCargo(rs.getString("cargo"));

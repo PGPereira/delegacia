@@ -11,7 +11,7 @@ import java.sql.Date;
  *
  * @author alunos
  */
-public class Contato {
+public class Prisioneiro {
 
     private Long id;
     private String nome;
